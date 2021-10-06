@@ -10,7 +10,7 @@ import com.example.myapplication.model.PokemonList
 
 import com.squareup.picasso.Picasso
 
-class AdapterGridPhoto(private val listener:  onItemClickListener) : PagingDataAdapter<PokemonList, AdapterGridPhoto.PhotoViewHolder>(PHOTO_COMPARATOR) {
+class AdapterPokemonList(private val listener:  onItemClickListener) : PagingDataAdapter<PokemonList, AdapterPokemonList.PhotoViewHolder>(PHOTO_COMPARATOR) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
         val binding: AdapterImageGridBinding= AdapterImageGridBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PhotoViewHolder(binding!!)

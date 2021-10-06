@@ -1,40 +1,44 @@
 package com.example.myapplication.model
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
 
 
 @Serializable
+@Entity
 data class Pokemon(
-val abilities: List<Ability>? = null,
+    @ColumnInfo(name = "abilities") val abilities: List<Ability>? = null,
 
-val baseExperience: Int? = null,
+    @ColumnInfo(name = "base_experience") val base_experience: Int? = null,
 
-val forms: List<PokemonList>? = null,
+    @ColumnInfo(name = "forms") val forms: List<PokemonList>? = null,
 
-val gameIndices: List<GameIndex>? = null,
+    @ColumnInfo(name = "game_indices") val gameIndices: List<GameIndex>? = null,
 
-val height: Int? = null,
+    @ColumnInfo(name = "height")  val height: Int? = null,
 
-val heldItems: List<HeldItem>? = null,
+    @ColumnInfo(name = "held_items")  val held_items: List<HeldItem>? = null,
 
-val id: Int? = null,
+    @PrimaryKey  @ColumnInfo(name = "id") val id: Int? = null,
 
-val isDefault: Boolean? = null,
+    @ColumnInfo(name = "is_default")  val is_default: Boolean? = null,
 
-val locationAreaEncounters: String? = null,
+    @ColumnInfo(name = "location_area_encounters")  val location_area_encounters: String? = null,
 
-val moves: List<Move>? = null,
+    @ColumnInfo(name = "moves")  val moves: List<Move>? = null,
 
-val name: String? = null,
+    @ColumnInfo(name = "name")  val name: String? = null,
 
-val order: Int? = null,
+    @ColumnInfo(name = "order")  val order: Int? = null,
 
-val species: PokemonList? = null,
+    @ColumnInfo(name = "species")  val species: PokemonList? = null,
 
-val sprites: Sprites? = null,
+    @ColumnInfo(name = "sprites")  val sprites: Sprites? = null,
 
-val stats: List<Stat>? = null,
+    @ColumnInfo(name = "stats")  val stats: List<Stat>? = null,
 
-val types: List<PokeType>? = null,
+    @ColumnInfo(name = "types")  val types: List<PokeType>? = null,
 
-val weight: Int? = null
+    @ColumnInfo(name = "weight")  val weight: Int? = null
 )

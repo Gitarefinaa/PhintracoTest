@@ -15,5 +15,6 @@ interface pokemonDao {
     @Query("SELECT * FROM pokemon")
     suspend fun   getMyPokemonList():Resource<BaseModel<Pokemon>>
 
-
+    @Query("UPDATE pokemon SET name = :name WHERE id = :id")
+    fun updatePokemon(id: Long, name: String?): Int
 }

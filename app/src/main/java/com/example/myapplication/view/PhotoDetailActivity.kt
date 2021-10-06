@@ -11,7 +11,6 @@ class PhotoDetailActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: DetailPokemonBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DetailPokemonBinding.inflate(this.layoutInflater)
@@ -20,8 +19,13 @@ class PhotoDetailActivity : AppCompatActivity() {
     fun ShowDialog(){
 
 
+
+
     }
     fun showPokemonDetail(){
+        binding?.textView4.text =""
+
+
 
     }
 

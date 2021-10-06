@@ -2,6 +2,7 @@ package com.example.myapplication.repository
 
 import com.example.myapplication.di.PokemonApiService
 import com.example.myapplication.model.BaseModel
+import com.example.myapplication.model.Pokemon
 import com.example.myapplication.model.PokemonList
 import com.example.myapplication.retrofitNetwork.retrofitService
 import io.ktor.client.*
@@ -26,7 +27,12 @@ class Repository@Inject constructor(private val api: retrofitService,private val
         val tempSongs = ktorNetworkService.fetchPokemonList()
         return tempSongs
         }
+
+    override suspend fun getPokemonDetail(id:String): Pokemon {
+        val data = ktorNetworkService.fetchPokemon(id)
+        return data
     }
+}
 
 
 

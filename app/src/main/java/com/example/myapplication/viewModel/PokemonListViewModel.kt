@@ -16,10 +16,9 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @HiltViewModel
-class PhotoViewModel @Inject constructor(private  val repository: Repository) : ViewModel(),LifecycleObserver {
+class PokemonListViewModel @Inject constructor(private  val repository: Repository) : ViewModel(),LifecycleObserver {
     lateinit var poto: Flow<PagingData<PokemonList>>
-    fun fetchPhotoList(query: String) {
-        Log.d("photo", query)
+    fun fetchPhotoList() {
         Pager(
             config = PagingConfig(
                 5,10,true,10
@@ -28,8 +27,7 @@ class PhotoViewModel @Inject constructor(private  val repository: Repository) : 
         ).flow
     }
 
-    fun fetchPokemonList(query: String) {
-        Log.d("photo", query)
+    fun fetchPokemonList() {
         Pager(
             config = PagingConfig(
                 5,10,true,10

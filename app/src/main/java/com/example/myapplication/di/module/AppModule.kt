@@ -1,8 +1,6 @@
 package com.example.myapplication.di.module
-import android.app.Application
 import android.content.Context
 import androidx.room.Room
-import com.example.myapplication.PokemonApp
 import com.example.myapplication.database.pokemonDao
 import com.example.myapplication.database.pokemonDatabase
 import dagger.Module
